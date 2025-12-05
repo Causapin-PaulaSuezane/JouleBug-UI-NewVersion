@@ -3,6 +3,11 @@
     <string name="app_name">JouleBug</string>
     <string name="app_logo">JouleBug Logo</string>
 
+    <!-- Welcome Activity -->
+    <string name="google_signin">Sign in with Google</string>
+    <string name="facebook_login">Log in with Facebook</string>
+    <string name="discord_login">Log in with Discord</string>
+
     <!-- Login Screen -->
     <string name="login_title">JouleBug</string>
     <string name="login_tagline">SOMETHING SOMETHING SLOGAN!</string>

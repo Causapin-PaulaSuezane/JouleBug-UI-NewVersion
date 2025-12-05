@@ -36,11 +36,6 @@ class LoginActivity : AppCompatActivity() {
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
 
-        // Check if user is already logged in
-        if (auth.currentUser != null) {
-            navigateToHome()
-        }
-
         animateLogo()
 
         setupClickListeners()
@@ -104,7 +99,7 @@ class LoginActivity : AppCompatActivity() {
                     // Login failed
                     Toast.makeText(
                         this,
-                        "Login failed! Please check your credentials. ",
+                        "Login failed: ${task.exception?.message}",
                         Toast.LENGTH_LONG
                     ).show()
                 }

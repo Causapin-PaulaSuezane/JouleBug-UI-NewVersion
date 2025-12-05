@@ -13,15 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- Login Activity (LAUNCHER) -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- LoginActivity -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
 
         <!-- Register Activity -->
         <activity
