@@ -104,7 +104,7 @@ class LoginActivity : AppCompatActivity() {
                     // Login failed
                     Toast.makeText(
                         this,
-                        "Login failed: ${task.exception?.message}",
+                        "Login failed! Please check your credentials. ",
                         Toast.LENGTH_LONG
                     ).show()
                 }
