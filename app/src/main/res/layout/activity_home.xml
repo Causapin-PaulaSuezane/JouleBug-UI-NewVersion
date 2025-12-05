@@ -111,9 +111,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Hi Player!"
-                                    android:textSize="20sp"
+                                    android:textSize="14.5sp"
                                     android:textColor="@color/pixel_black"
-                                    android:fontFamily="@font/pixelzone_0v6y4"
+                                    android:fontFamily="@font/snowbell_wp4g9"
                                     android:textStyle="bold"/>
 
                                 <LinearLayout
@@ -781,7 +781,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:gravity="center_vertical">
+                                android:gravity="center_vertical"
+                                android:layout_marginBottom="12dp">
 
                                 <CheckBox
                                     android:id="@+id/cbWeeklyTask2"

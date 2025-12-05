@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.mobcom.databinding.ActivityProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 
 class ProfileActivity : AppCompatActivity() {
 
@@ -58,7 +59,6 @@ class ProfileActivity : AppCompatActivity() {
                     val streak = document.getLong("streak")?.toInt() ?: 0
                     val tasksCompleted = document.getLong("tasksCompleted")?.toInt() ?: 0
                     val badgesEarned = document.getLong("badgesEarned")?.toInt() ?: 0
-                    val rank = document.getLong("rank")?.toInt() ?: 0
                     val joinDate = document.getString("joinDate") ?: "Unknown"
 
                     // Update UI
@@ -69,12 +69,33 @@ class ProfileActivity : AppCompatActivity() {
                     binding.tvStreak.text = "$streak day streak 🔥"
                     binding.tvTasksCompleted.text = tasksCompleted.toString()
                     binding.tvBadgesEarned.text = badgesEarned.toString()
-                    binding.tvRank.text = if (rank > 0) "#$rank" else "Unranked"
                     binding.tvJoinDate.text = "Member since $joinDate"
+
+                    // Calculate rank dynamically
+                    calculateUserRank(currentUserId, xp)
                 }
             }
             .addOnFailureListener { e ->
                 Toast.makeText(this, "Failed to load profile: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    private fun calculateUserRank(userId: String, userXP: Int) {
+        firestore.collection("users")
+            .orderBy("xp", Query.Direction.DESCENDING)
+            .get()
+            .addOnSuccessListener { documents ->
+                var rank = 0
+                for ((index, document) in documents.withIndex()) {
+                    if (document.id == userId) {
+                        rank = index + 1
+                        break
+                    }
+                }
+                binding.tvRank.text = if (rank > 0) "#$rank" else "Unranked"
+            }
+            .addOnFailureListener {
+                binding.tvRank.text = "Unranked"
             }
     }
 
