@@ -165,6 +165,9 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val firstName = fullName.split(" ").firstOrNull() ?: fullName
         binding.tvGreeting.text = "Hi $firstName!"
 
+        // Update Level
+        binding.tvLevel.text = "LV $level"
+
         // Update XP
         binding.tvXP.text = xp.toString()
 
@@ -181,14 +184,12 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private fun updateDrawerHeader(fullName: String, level: Int, xp: Int) {
         val headerView = navigationView.getHeaderView(0)
         val tvDrawerUserName = headerView.findViewById<TextView>(R.id.tvDrawerUserName)
+        val tvDrawerLevel = headerView.findViewById<TextView>(R.id.tvDrawerLevel)
         val tvDrawerXP = headerView.findViewById<TextView>(R.id.tvDrawerXP)
 
         tvDrawerUserName.text = fullName
+        tvDrawerLevel.text = "LV $level"
         tvDrawerXP.text = "$xp/1000 XP"
-
-        // TODO: Load user avatar
-        // val ivDrawerAvatar = headerView.findViewById<ImageView>(R.id.ivDrawerAvatar)
-        // Glide.with(this).load(avatarUrl).into(ivDrawerAvatar)
     }
 
     // Navigation Drawer Item Selection

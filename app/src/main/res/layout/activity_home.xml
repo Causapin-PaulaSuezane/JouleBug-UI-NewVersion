@@ -123,9 +123,10 @@
                                     android:layout_marginTop="4dp">
 
                                     <TextView
+                                        android:id="@+id/tvLevel"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="@string/lv_8"
+                                        android:text="LV 1"
                                         android:textSize="8sp"
                                         android:textColor="@color/pixel_black"
                                         android:fontFamily="@font/snowbell_wp4g9"
