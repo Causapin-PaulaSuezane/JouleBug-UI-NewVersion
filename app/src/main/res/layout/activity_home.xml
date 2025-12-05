@@ -589,7 +589,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:fontFamily="@font/snowbell_wp4g9"
-                                    android:text="SOMETHING TASK"
+                                    android:text="DAILY TASK 1"
                                     android:textColor="@color/pixel_black"
                                     android:textSize="14sp"
                                     android:textStyle="bold"/>
@@ -623,7 +623,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:fontFamily="@font/snowbell_wp4g9"
-                                    android:text="SOMETHING TASK"
+                                    android:text="DAILY TASK 2"
                                     android:textColor="@color/pixel_black"
                                     android:textSize="14sp"
                                     android:textStyle="bold"/>
@@ -656,7 +656,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:fontFamily="@font/snowbell_wp4g9"
-                                    android:text="SOMETHING TASK"
+                                    android:text="DAILY TASK 3"
                                     android:textColor="@color/pixel_black"
                                     android:textSize="14sp"
                                     android:textStyle="bold"/>
@@ -803,6 +803,40 @@
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/snowbell_wp4g9"
                                     android:text="+120 XP"
+                                    android:textColor="#00BCD4"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"/>
+                            </LinearLayout>
+
+                            <!-- Weekly Task Item 3 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_marginBottom="12dp">
+
+                                <CheckBox
+                                    android:id="@+id/cbWeeklyTask3"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginEnd="8dp"/>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/snowbell_wp4g9"
+                                    android:text="WEEKLY TASK 3"
+                                    android:textColor="@color/pixel_black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/snowbell_wp4g9"
+                                    android:text="+250 XP"
                                     android:textColor="#00BCD4"
                                     android:textSize="12sp"
                                     android:textStyle="bold"/>

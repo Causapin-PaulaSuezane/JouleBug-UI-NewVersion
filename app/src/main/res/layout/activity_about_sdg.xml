@@ -241,7 +241,7 @@
                 android:id="@+id/btnAllSDGs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="VIEW ALL UN SDGs"
+                android:text="VIEW ALL IN SDGs"
                 android:textSize="14sp"
                 android:textColor="@color/pixel_white"
                 android:fontFamily="@font/snowbell_wp4g9"
